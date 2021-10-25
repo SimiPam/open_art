@@ -1,0 +1,38 @@
+import 'package:flutter/material.dart';
+import 'package:open_art/shared/models/theme_model.dart';
+
+ThemeModel lightThemeMode = ThemeModel(
+  id: 'light',
+  offWhite: Color.fromRGBO(252, 252, 252, 1),
+  background: Color.fromRGBO(248, 248, 248, 1),
+  inputBackground: Color.fromRGBO(240, 240, 240, 1),
+  line: Color.fromRGBO(220, 220, 220, 1),
+  placeholder: Color.fromRGBO(136, 136, 136, 1),
+  label: Color.fromRGBO(85, 85, 85, 1),
+  body: Color.fromRGBO(51, 51, 51, 1),
+  titleActive: Color.fromRGBO(34, 34, 34, 1),
+  primary: Color.fromRGBO(0, 46, 241, 1),
+  secondary: Color.fromRGBO(255, 184, 2, 1),
+  error: Color.fromRGBO(254, 63, 97, 1),
+  warning: Color.fromRGBO(255, 103, 17, 1),
+  success: Color.fromRGBO(0, 152, 70, 1),
+  black: Color.fromRGBO(44, 44, 44, 1),
+  text: Color.fromRGBO(107, 107, 107, 1),
+  subText: Color.fromRGBO(144, 144, 144, 1),
+  lowerText: Color.fromRGBO(181, 181, 181, 1),
+  fade: Color.fromRGBO(198, 198, 198, 1),
+  deactivateMenu: Color.fromRGBO(219, 219, 219, 1),
+  halfFade: Color.fromRGBO(227, 227, 227, 1),
+  quatreFade: Color.fromRGBO(241, 241, 241, 1),
+  page: Color.fromRGBO(242, 242, 242, 1),
+  // inBetween: Color.fromRGBO(248, 248, 248, 1),
+  white: Color.fromRGBO(255, 255, 255, 1),
+  disabled: Color.fromRGBO(250, 250, 250, 1),
+  red: Color.fromRGBO(252, 47, 28, 1),
+  urgent: Color.fromRGBO(255, 184, 177, 1),
+  outerBorder: Color(0xffE2E2E2),
+  blue: Color(0xff1577FC),
+
+  midText: Color.fromRGBO(189, 189, 189, 1),
+  greyIcon: Color.fromRGBO(82, 82, 82, 1),
+);
