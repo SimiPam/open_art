@@ -69,6 +69,29 @@ class _HomeState extends State<Home> {
                   fontSize: 32.sp,
                 ),
               ),
+              Center(
+                  child: Container(
+                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 30),
+                decoration: ShapeDecoration(
+                  shape: StadiumBorder(),
+                  gradient: LinearGradient(
+                    begin: Alignment.centerLeft,
+                    end: Alignment.centerRight,
+                    colors: [Colors.blue, Colors.orange, Colors.green],
+                  ),
+                ),
+                child: MaterialButton(
+                  materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                  shape: StadiumBorder(),
+                  child: Text(
+                    'A Samll Button',
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                  onPressed: () {
+                    print('Hello!');
+                  },
+                ),
+              )),
             ],
           ),
         ),
