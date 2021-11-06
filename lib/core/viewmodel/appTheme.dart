@@ -6,7 +6,7 @@ class AppThemeModel extends ChangeNotifier {
   bool get lightAppTheme => _lightAppTheme;
 
   ///updates the current index of the bottom nav
-  switchAppTheme(int index) {
+  switchAppTheme() {
     _lightAppTheme = !_lightAppTheme;
     notifyListeners();
   }

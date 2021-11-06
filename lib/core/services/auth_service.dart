@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
-
+import 'package:open_art/core/model/user_model.dart';
 import 'package:open_art/core/service_injector/service_injector.dart';
 import 'package:open_art/core/services/storage_service.dart';
 import 'package:open_art/core/services/store_service.dart';
@@ -10,11 +10,10 @@ import 'package:open_art/shared/models/auth_model.dart';
 import 'package:open_art/shared/models/layout_model.dart';
 import 'package:open_art/shared/utils/config.dart';
 
+import 'package:firebase_auth/firebase_auth.dart' as auth;
 
-
-
-class AuthService {
-  AuthService({
+class AuthServices {
+  AuthServices({
     this.storageService,
     this.storeService,
   });
@@ -23,6 +22,35 @@ class AuthService {
   StoreService storeService;
 
   bool _refreshing = false;
+
+  // final auth.FirebaseAuth _firebaseAuth = auth.FirebaseAuth.instance;
+  //
+  // User _user(auth.User user) {
+  //   if (user == null) {
+  //     return null;
+  //   }
+  //   return User(uid: user.uid, email: user.email);
+  // }
+  //
+  // Stream<User> get user {
+  //   return _firebaseAuth.authStateChanges().map(_user);
+  // }
+  //
+  // Future<User> signIn(email, password) async {
+  //   final credential = await _firebaseAuth.signInWithEmailAndPassword(
+  //       email: email, password: password);
+  //   return _user(credential.user);
+  // }
+  //
+  // Future<User> signUp(email, password) async {
+  //   final credential = await _firebaseAuth.createUserWithEmailAndPassword(
+  //       email: email, password: password);
+  //   return _user(credential.user);
+  // }
+  //
+  // Future<void> signOut(email, password) async {
+  //   return await _firebaseAuth.signOut();
+  // }
 
   Future<bool> isLoggedIn() async {
     final AuthPayload auth = await getAuthData();

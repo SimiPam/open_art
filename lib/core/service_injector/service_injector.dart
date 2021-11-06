@@ -13,7 +13,7 @@ class Injector {
   LayoutService layoutService = LayoutService();
   RouterService routerService = RouterService();
   ApiService apiService;
-  AuthService authService;
+  AuthServices authService;
   ColorService colorService;
   UserService userService;
   Future<bool> init() async {
@@ -23,7 +23,7 @@ class Injector {
     apiService = ApiService(storeService);
     // color and theme service
     colorService = ColorService(storageService);
-    authService = AuthService(
+    authService = AuthServices(
       storageService: storageService,
       storeService: storeService,
     );
